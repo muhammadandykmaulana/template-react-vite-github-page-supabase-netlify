@@ -1,0 +1,11 @@
+[build]
+    command = "npm run build"
+    publish = "dist"
+
+# Aturan Redirect untuk Single Page Application (SPA)
+# Ini Wajib agar saat di-refresh halaman tidak error 404 (Page Not Found)
+# Netlify akan mengarahkan semua request kembali ke index.html agar React Router yang menangani.
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
